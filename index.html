@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Ruba ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ min-height:100vh;
+ background:radial-gradient(circle at center,#50152f,#180817 75%);
+ color:white;
+ font-family:'Cairo',sans-serif;
+ text-align:center;
+ overflow-x:hidden;
+}
+.screen{
+ min-height:100vh;
+ display:none;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ padding:25px;
+ animation:fade 1.2s;
+}
+.screen.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+h1{font-size:32px;color:#ffd5e4}
+p{font-size:17px;line-height:2}
+.small{color:#f5b7cf}
+button{
+ border:0;
+ border-radius:35px;
+ padding:13px 28px;
+ font-family:inherit;
+ font-size:17px;
+ cursor:pointer;
+ margin:9px;
+ transition:.3s;
+}
+button:active{transform:scale(.95)}
+.primary{
+ background:linear-gradient(135deg,#ffb6d0,#d83d7b);
+ color:#390d25;
+ font-weight:bold;
+ box-shadow:0 0 25px #ff7eae66;
+}
+.secondary{background:#ffffff18;color:white;border:1px solid #ffb6d0}
+.envelope{
+ font-size:105px;
+ cursor:pointer;
+ animation:float 2s infinite ease-in-out;
+}
+@keyframes float{50%{transform:translateY(-15px)}}
+.letter{
+ max-width:500px;
+ padding:25px;
+ background:#ffffff10;
+ border:1px solid #ffb6d055;
+ border-radius:22px;
+ line-height:2.2;
+ box-shadow:0 0 35px #ff5b9b20;
+}
+.ring{
+ font-size:110px;
+ animation:ring 2s infinite;
+ filter:drop-shadow(0 0 22px #ffb6d0);
+}
+@keyframes ring{50%{transform:scale(1.12);filter:drop-shadow(0 0 35px #ffd5e4)}}
+.script{font-family:'Great Vibes',cursive;font-size:48px;color:#ffb8d0;direction:ltr}
+.heart{
+ position:fixed;bottom:-30px;
+ pointer-events:none;
+ animation:rise linear forwards;
+ z-index:5;
+}
+@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+#no{position:relative}
+.confetti{font-size:30px;animation:float 1.5s infinite}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+ <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="screen active" id="s1">
+ <div class="script">For My Ruba</div>
+ <div style="font-size:65px">💌</div>
+ <h1>في شي صغير بدي قلك ياه...</h1>
+ <p class="small">بس قبل ما تكمّلي، حضّري قلبك ❤️</p>
+ <div class="envelope" onclick="openLetter()">✉️</div>
+ <button class="primary" onclick="openLetter()">افتحي رسالتك يا رُبى</button>
+</section>
+
+<section class="screen" id="s2">
+ <div class="letter">
+  <div class="script">My Love ❤️</div>
+  <h1>رُبى...</h1>
+  <p>
+   من وقت ما دخلتي حياتي، صار للحياة طعم تاني.
+   <br>
+   صرت شوف مستقبلي معك ،
+   وصرت أتخيّل كل أحلامي وإنتِ جنبي.
+   <br>
+   ما بدي تكوني بس حبيبتي...
+   بدي تكوني بيتي، وراحتي، وأجمل نصيب بحياتي.
+   <br>
+   وكل يوم بدي اختارك من جديد.
+  </p>
+ </div>
+ <button class="primary" onclick="next(3)">في مفاجأة إلك... ❤️</button>
+</section>
+
+<section class="screen" id="s3">
+ <div class="script">A question from my heart</div>
+ <div class="ring">💍</div>
+ <h1>رُبى حبيبتي...</h1>
+ <p>
+ عندي سؤال واحد، بس جوابه رح يغيّر كل حياتي...
+ <br>
+ <strong style="color:#ffd0e1;font-size:23px">
+ بتقبلي تكوني شريكة عمري؟
+ </strong>
+ <br>
+ نكبر سوا، نضحك سوا، نواجه الدنيا سوا،
+ ونضل حد بعض مهما صار؟
+ </p>
+ <h1 style="font-size:27px">بتقبلي تتزوجيني؟ 🥹❤️</h1>
+ <div>
+  <button class="primary" onclick="yes()">إي بقبل يا محمد ❤️</button>
+  <button class="secondary" id="no" onclick="moveNo()">خلّيني فكّر 😂</button>
+ </div>
+</section>
+
+<section class="screen" id="s4">
+ <div class="confetti">🎉 💍 🎊 ❤️ 🎉</div>
+ <div class="ring">💍</div>
+ <div class="script">She Said YES!</div>
+ <h1 style="font-size:35px">يااااا رُبى ❤️</h1>
+ <p>
+ ما بتعرفي قديش هاللحظة غالية على قلبي.
+ <br>
+ وعد مني إلك...
+ <br>
+ رح ضل حبّك، اختارك، ووقف حدّك،
+ ورح نكتب أحلى قصة سوا.
+ </p>
+ <div class="letter">
+  <div class="script">Mhmd & Ruba</div>
+  <h2 style="color:#ffd0e1">Forever & Always ♾️</h2>
+  <p>أحلى قرار بحياتي هو إنتِ. ❤️</p>
+ </div>
+ <p class="small">بحبك يا خطيبتي المستقبلية 🥹💍</p>
+</section>
+
+<script>
+function next(n){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById('s'+n).classList.add('active');
+}
+function openLetter(){
+ next(2);
+}
+function yes(){
+ const music=document.getElementById('music');
+ music.play().catch(()=>{});
+ next(4);
+ for(let i=0;i<70;i++){
+  setTimeout(heart, i*70);
+ }
+}
+function moveNo(){
+ const b=document.getElementById('no');
+ b.style.transform=`translate(${Math.random()*100-50}px,${Math.random()*80-40}px)`;
+}
+function heart(){
+ const h=document.createElement('div');
+ h.className='heart';
+ h.textContent=['❤️','💗','💕','✨','💖'][Math.floor(Math.random()*5)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize=(16+Math.random()*25)+'px';
+ h.style.animationDuration=(3+Math.random()*4)+'s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),7000);
+}
+setInterval(heart,650);
+</script>
+
+</body>
+</html>
